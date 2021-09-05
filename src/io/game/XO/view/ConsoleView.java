@@ -48,7 +48,7 @@ public class ConsoleView {
         try {
             moveController.applyFigure(field, point, currentFigure);
         } catch (final InvalidPointException | AlreadyOccupiedException e) {
-            System.out.println("Point is invalid!");
+            System.out.println("Point is invalid! Please input correct coordinate:");
         }
         return true;
     }
@@ -63,7 +63,7 @@ public class ConsoleView {
         try {
             return in.nextInt();
         } catch (final InputMismatchException e) {
-            System.out.println("0_0 olololo!!!!!");
+            System.out.println("Point is invalid! Please input correct coordinate:");
             return askCoordinate(coordinateName);
         }
     }
